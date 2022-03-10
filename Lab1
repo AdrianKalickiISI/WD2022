@@ -1,0 +1,103 @@
+
+LAB_1
+ZAD_1
+
+imie ="Adrian"
+nazwisko = "Kalicki"
+wiek =25
+
+a=10
+b=21
+
+c=8.9
+d=97.05
+
+e=6+3j
+f=21+98j
+
+
+print(imie)
+print(nazwisko)
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+
+ZAD_2
+
+a=10
+b=5
+c=2
+
+print(a+c)
+print(a-b)
+print(b/c)
+print(a*b)
+print(a//c)
+print(a%c)
+print(b**c)
+
+ZAD_3
+
+y=3
+print(y)
+y-=1
+print(y)
+y+=0
+print(y)
+y*=2
+print(y)
+y/=3
+print(y)
+y**=3
+print(y)
+y%=y
+print(y)
+
+ZAD_4
+
+print(math.e**10)
+print(math.floor(3.55))
+print(math.ceil(4.80))
+
+ZAD_5
+
+imie="ADRIAN"
+nazwisko="KALICKI"
+
+print(imie.capitalize()+nazwisko.capitalize())
+
+ZAD_6
+
+tekst=" la la la la la la la la la la la la la"
+
+print(tekst.count("la"))
+
+ZAD_7
+
+imie="ADRIAN"
+print(imie[0] + imie[-1])
+
+ZAD_8
+
+tekst=" dzyn dzyn dzyn dzyn dzyn dzyn"
+piosenka = tekst.split()
+print(piosenka)
+
+ZAD_9
+
+znaki ="ucze sie od 0"
+liczba = 1.5
+kod = 0x7b
+
+print('to sa znaki:{0:s}, to jest liczba: {1:2f}, a to szesnastkowa: {2:X}'.format(znaki,liczba,kod))
+
+
+
+
+
+
+
+
