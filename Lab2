@@ -1,0 +1,73 @@
+LAB_2
+
+ZAD_1
+
+lista=["pilkanozna", "koszykowka", "siatkowka", "reczna"]
+lista.reverse()
+
+lista.insert(5,"saneczkarstwo")
+print(lista)
+
+ZAD_2
+
+slownik={"tzn":"toznaczy", "wg":"wedlug", "np":"naprzyklad", "nr":"numer", "str":"strona","itp":"itympodobne", "itd":"itakdalej"}
+
+ZAD_3
+
+slownik={"W":"wiedzmin", "CJ":"gtasa", "PB":"Gothic"}
+print("Liczba elementow: ", len(slownik))
+
+print(slownik.keys())
+
+ZAD_4
+
+zdanie= input("Napisz dowolne zdanie: ")
+print("litera 'a' wystepuje: " +str(zdanie.count('a')))
+
+
+ZAD_5
+
+
+
+ZAD_6
+a=input("Podaj liczbe a: ")
+b=input("Podaj liczbe b: ")
+c=input("Podaj liczbe c: ")
+a=int(a)
+b=int(b)
+c=int(c)
+
+if(a>b) & (a>c):
+    print("liczba a jest najwieksza")
+if(b>a) & (b>c):
+    print("liczba b jest najwieksza")
+if(c>a) & (c>b):
+    print("liczba c jest najwieksza")
+
+ZAD_7
+
+lista = [1,2,3,4,5,6]
+for x in range(len(lista)):
+    lista[x] = pow(lista[x],2)
+    print(lista)
+
+ZAD_8
+
+z = 0
+while z !=10:
+    print(z)
+    z +=1
+
+
+
+ZAD_9
+import math
+
+pieriwastek = float(input("Podaj liczbe do pierwiastkowania: "))
+try:
+    print("Pierwistek z twojej liczby to: " + str(math.sqrt(pieriwastek)))
+#except ValueError:
+    print("Liczby ujemnej nie pierwiastkujemy!")
+
+
+
