@@ -1,77 +1,75 @@
-# LAB_3
+ LAB_3
 
-# ZAD_1
+ ZAD_1
 
-# a=[1-x for x in range(1,11)]
-# b=[4**i for i in range(8)]
-# c=[x for x in b if x % 2==0]
-# print(a)
-# print(b)
-# print(c)
-
-
-# ZAD_2
-
-# lista1=[1,10,42,56,61,81,92,81,32,10]
-
-# lista2=[i for i in lista1 if i % 2==0]
-# print(lista2)
+ a=[1-x for x in range(1,11)]
+ b=[4**i for i in range(8)]
+ c=[x for x in b if x % 2==0]
+ print(a)
+ print(b)
+ print(c)
 
 
-# ZAD_3
+ ZAD_2
 
-# Prod_spoz={"banany":"kg", "chleb":"szt", "woda":"szt", "jablka":"kg"}
-# Prod_spoz2={}
+ lista1=[1,10,42,56,61,81,92,81,32,10]
 
+ lista2=[i for i in lista1 if i % 2==0]
+ print(lista2)
 
-# ZAD_4
+ ZAD_3
 
-# a=input("wprowadz pierwsza liczbe: ")
-# b=input("Wprowadz druga liczbe: ")
-# c=input("Wprowadz trzecia liczbe: ")
+Prod_spoz={"banany":"kg", "chleb":"szt","woda":"l","pomidory":"kg","jogurt":"szt", "ryba":"kg"}
+print(Prod_spoz)
 
-# a=int(a)
-# b=int(b)
-# c=int(c)
+Prod_spoz2={key: value for key, value in Prod_spoz.items() if value == "szt"}
+print(Prod_spoz2)
 
-# if((a+b>c) and (a+c>b) and (b+c>a)):
-#    if ((a*a+b*b==c*c) or (a*a+c*c==b*b) or (c*c+b*b==a*a)):
-#            print("To jest trójkąt prostokątny")
-#    else:
-#            print("To nie jest trójkąt prostokątny")
-# else:
-#        print("Nie mozna zbudowac trojkata")
+ ZAD_4
 
+ a=input("wprowadz pierwsza liczbe: ")
+ b=input("Wprowadz druga liczbe: ")
+ c=input("Wprowadz trzecia liczbe: ")
 
-# ZAD_5
-# def pole_trap(a,b,h):
-#    return 1/2(a+b)*h
+ a=int(a)
+ b=int(b)
+ c=int(c)
 
-# ZAD_6
-
-import math
-
-
-#def iloczyn(a,b,ile):
- #   result = a
-  #  for i in range(ile):
-   #     result *= b
-    #    a += 1
-
-  #  return  result
+ if((a+b>c) and (a+c>b) and (b+c>a)):
+    if ((a*a+b*b==c*c) or (a*a+c*c==b*b) or (c*c+b*b==a*a)):
+            print("To jest trójkąt prostokątny")
+    else:
+            print("To nie jest trójkąt prostokątny")
+ else:
+        print("Nie mozna zbudowac trojkata")
 
 
+ ZAD_5
+ def pole_trap(a,b,h):
+    return 1/2(a+b)*h
 
+ ZAD_6
 
-# ZAD_8
+def ciag_A(a=1, b=4, ile=10):
+    ciag = []
+    wynik=a
+    for i in range(0,ile,1):
+        wynik=wynik*b
+        ciag.append(wynik)
+    return ciag
+print(ciag_A())
 
-#def zakupy(** produkty):
-#    for produkty in cos:
-#        print(cos)
-#        print(produkty[cos])
-
-#zakupy(slodycze="batony",przekaski="chipsy",pieczywo="chleb")
-
+ZAD_7
+def ciag_B(*ile):
+    ciag = []
+    b = 4
+    a = 1
+    wynik = a
+    for i in ile:
+        wynik = wynik * b
+        ciag.append(wynik)
+        i += 1
+    return ciag
 
 
 
