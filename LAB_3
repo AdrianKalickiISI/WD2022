@@ -12,10 +12,13 @@
 
  ZAD_2
 
- lista1=[1,10,42,56,61,81,92,81,32,10]
-
- lista2=[i for i in lista1 if i % 2==0]
- print(lista2)
+lista1=[]
+for x in range(0,10):
+    s=random.randint(1,100)
+    lista1.append(s)
+lista2=[i for i in lista1 if i %2==0]
+print(lista1)
+print(lista2)
 
  ZAD_3
 
