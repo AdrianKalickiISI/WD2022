@@ -1,0 +1,172 @@
+***** A *****
+print("Zadanie 1")
+wynik1=math.pow(5/9,2)+math.pow(math.log(23+math.sin(45)),1/4)
+print(round(wynik1,2))
+print("\n")
+
+print("Zadanie 2")
+lista20=[1,34,22,2,4,2,1,42]
+print("najmniejszym elementem jest:",min(lista20))
+print("Najmniejszy element powtarza sie:",lista20.count(min(lista20)))
+print("\n")
+
+print("Zadanie 4")
+try:
+    a=int(input("Podaj a:"))
+    lista40=[1,2,3,4]
+    lista41=[]
+    for i in lista40:
+        if a<i:
+            lista41.append(i)
+except ValueError:
+    print("To nie jest liczba!")
+    
+    print(lista41)
+print("liczb mniejszych jest:",len(lista41))
+print("\n")
+
+*****B*****
+
+print("Zadanie 1")
+
+wynik2=math.pow(math.sin(65)+math.pow(4/5,2),1/4)
+print(wynik2)
+print(round(wynik2,2))
+print("\n")
+
+
+print("Zadanie 2")
+lista50 = [1, 2, 3, 'a', 'b', 'c']
+def funkcja(listaliczb):
+
+    listaliczb=[]
+    listaznakow=[]
+    for m in lista50:
+        if type(m)==int:
+            listaliczb.append(m)
+        else:
+            listaznakow.append(m)
+    print(listaliczb)
+    print(listaznakow)
+    print("Liczb jest:", len(listaliczb))
+    print("Znakow jest:", len(listaznakow))
+funkcja(lista50)
+print("\n")
+
+print("Zadanie 3")
+slownik30={1:'ogien',2:'woda','trzy':'3','cztery':'4',4.4:'to'}
+slownik31=[]
+print("Elementow jest:" ,len(slownik30))
+
+for i in slownik30:
+    if(type(i)==int):
+        slownik31.append(slownik30[i])
+print("Kluczy ktore sa liczbami jest:", len(slownik31))
+print("\n")
+
+print("Zadanie 4")
+try:
+    a=int(input("Podaj a:"))
+    lista40=[1,2,3,4]
+    lista41=[]
+    for i in lista40:
+        if a<i:
+            lista41.append(i)
+except ValueError:
+    print("To nie jest liczba!")
+print(lista41)
+print("liczb mniejszych jest:",len(lista41))
+print("\n")
+
+*****A1*****
+
+print("Zadanie 1")
+wynik3=math.pow(5/36,1/5)+math.e**5+math.pow(math.cos(15),2)
+print(wynik3)
+print(round(wynik3,2))
+print("\n")
+
+
+print("Zadanie 2")
+lista60=[4,5,2,4.5,8.9,3,100,2.3]
+listacalkowite=[]
+listazmiennop=[]
+
+for k in lista60:
+    if type(k)==int:
+        listacalkowite.append(k)
+    else:
+        listazmiennop.append(k)
+print(listazmiennop)
+print(listacalkowite)
+print("Liczb zmiennoprzecinkowych jest:",len(listazmiennop))
+print("Liczb calkowitych jest:",len(listacalkowite))
+print("\n")
+
+
+print("Zadanie 3")
+lista33=[1,2,3,'a','b']
+def funkcja(listaliczbowa):
+    listaliczbowa=[]
+    for g in lista33:
+        if type(g)==int:
+            listaliczbowa.append(g)
+    print(listaliczbowa)
+    print("To sa wszystkie liczby:",len(listaliczbowa))
+    print("suma tych liczb to:", sum(listaliczbowa))
+funkcja(lista33)
+print("\n")
+
+print("Zadanie 4")
+
+try:
+    oc=int(input("Podaj liczbe w systemie dziesietnym: "))
+    print("Convert...", oct(oc))
+except ValueError:
+    print("To nie jest liczba w systemie dziesietnym")
+print("\n")
+
+*****A2*****
+print("Zadanie 1")
+slownikmij={1:'ja',3:5,4:'osiem'}
+def funkcja(x):
+    listaz=[]
+    for i in x:
+        if(type(x[i]))==int:
+            if(type(i))==int:
+                listaz.append(i)
+                listaz.append(x[i])
+    print(listaz)
+funkcja(slownikmij)
+
+
+print("Zadanie 2")
+wynik4=math.log(27,3) + math.pow(8/26+math.sin(50),1/3)
+print(wynik4)
+print(round(wynik4,3))
+print("\n")
+
+print("Zadanie 3")
+mojalista=[1,2,3,4,5,6,7,8,9,10]
+liczby=[]
+for i in range(10):
+    if mojalista[i]%2==0:
+        liczby.append(mojalista[i])
+print(liczby)
+print(len(liczby))
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+    
+    
