@@ -1,0 +1,32 @@
+print("**********LAB4**********")
+print("\n")
+
+print("Zadanie 1")
+tablica1=np.arange(3,48,3)
+print(tablica1)
+print("\n")
+
+print("Zadanie 2")
+lista1=np.array([1.2,3.35,4.5])
+print("Typ tablicy to", lista1.dtype)
+print(lista1, "\n")
+
+lista2=lista1.astype('int64')
+print("Typ tablicy po zmianie to", lista2.dtype)
+print(lista2)
+print("\n")
+
+print("Zadanie 3")
+def tablica(n):
+    tablica=np.arange(1, n*n+1)
+    tablica=tablica.reshape((n,n))
+    return tablica
+print(tablica(5))
+print("\n")
+
+print("Zadanie 4")
+def potega(a,b):
+    zad=np.logspace(1, a,num=a,base=b,dtype=int)
+    return zad
+print(potega(2,4))
+print("\n")
