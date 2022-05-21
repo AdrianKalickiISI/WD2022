@@ -156,6 +156,21 @@ print(liczby)
 print(len(liczby))
 
 
+def lista(lista4=[1,2,3,4,"a","b","c","d"]):
+    lista5=[]
+    for i in lista4:
+        try:
+            int(i)
+            lista5.append(i)
+        except:
+            str(i)
+    return lista5
+print(sum(lista()))
+print("\n")
+
+
+
+
 
 
 
