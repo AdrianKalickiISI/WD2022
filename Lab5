@@ -1,1 +1,92 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
+print("Zadanie 1")
+a=np.array([6,7,9])
+b=np.array([21,11,30])
+wynik=a*b
+print(wynik)
+print("\n")
+
+print("Zadanie 2")
+c=np.array([[4,5,1],[4,4,4],[8,3,0]])
+d=np.array([[5,4,2,2],[2,2,2,1],[5,7,7,5],[1,2,1,2]])
+print(c)
+print(d)
+
+print(c.min(axis=0))
+print(c.min(axis=1))
+print(d.min(axis=0))
+print(c.min(axis=1))
+print("\n")
+
+print("Zadanie 3")
+a=np.array([6,7,9])
+b=np.array([21,11,30])
+c=np.dot(a,b)
+print(c)
+print("\n")
+
+print("Zadnie 4")
+a=np.array([2,5,4],dtype='int64')
+b=np.array([4.5,2.3,1.5],dtype='float64')
+wynik=a*b
+print(wynik)
+print("\n")
+
+print("Zadanie 5")
+d=np.array([[20,2],[15,7],[44,3]])
+a=np.sin(d)
+print(a)
+print("\n")
+
+print("Zadanie 6")
+e=np.array([[22,3],[25,5],[14,2]])
+b=np.cos(e)
+print(b)
+print("\n")
+
+print("Zadanie 7")
+dod=np.add(a,b)
+print(dod)
+print("\n")
+
+print("Zadanie 8")
+a=np.array([[2,3,4],[5,5,5],[6,6,6]])
+for b in a:
+    print(b)
+print("\n")
+
+print("Zadanie 9")
+a=np.array([[2,2,2],[4,4,4],[6,6,6]])
+for c in a.flat:
+    print(c)
+print("\n")
+
+print("Zadanie 10")
+macierz = np.arange(0,81,1).reshape(9,9)
+print(macierz)
+
+macierz_1 = macierz.reshape(3,27)
+print(macierz_1)
+macierz_2 = macierz.reshape(27,3)
+print(macierz_2)
+macierz_3 = macierz.reshape(81,1)
+print(macierz_3)
+macierz_4 = macierz.ravel()
+print(macierz_4)
+print("\n")
+
+print("Zadanie 11")
+a = np.array([3, 7, 5, 6, 1, 9, 2, 7, 8, 6, 3, 6])
+print(a)
+macierz_1 = a.reshape(3, 4)
+print(macierz_1)
+print(macierz_1.ravel())
+macierz_2 = macierz_1.reshape(4,3)
+print(macierz_2)
+print(macierz_2.ravel())
+macierz_3 = macierz_1.reshape(2,6)
+print(macierz_3)
+print(macierz_3.ravel())
