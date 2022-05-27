@@ -30,3 +30,44 @@ def potega(a,b):
     return zad
 print(potega(2,4))
 print("\n")
+print("Zadanie 5")
+def diag(n):
+    a=np.arange(n,-1,-1)
+    diagonalna=np.diag(a)
+    return diagonalna
+print(diag(6))
+print("\n")
+
+print("Zadanie 6")
+kot=np.array(list('kot'))
+pies=np.array(list('pies'))
+kura=np.array(list('kura'))
+kura=np.flip(kura)
+
+wykreslanka=np.zeros((5,5),dtype='str')
+
+print(wykreslanka)
+
+wykreslanka = np.diag(pies)
+wykreslanka[:,0] =kot
+wykreslanka[5,::-1] = kura
+wykreslanka[5,:] = kura
+print(wykreslanka)
+print("")
+wykreslanka[:, 0] = kot
+wykreslanka[5,::-1] = kura
+for a in range(5):
+    wykreslanka[a,a] = pies[a]
+print(wykreslanka)
+print("\n")
+
+
+def macierz(n):
+     mac = np.zeros((n, n), dtype='int32')
+     mac += np.diag([2 for _ in range(n)])
+     for i in range(1, n):
+         mac += np.diag([2+(2*i) for _ in range(n-i)], k=i)
+         mac += np.diag([2+(2*i) for _ in range(n-i)], k=-i)
+     print(mac)
+
+macierz(3)
