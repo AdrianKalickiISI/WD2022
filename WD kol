@@ -1,0 +1,14 @@
+*** ZADANIE 1 ***
+
+x=np.linspace(1,20,75)
+x1=np.arange(1,20.75,1)
+y=(1/x)
+plt.plot(x,y,'mo-', label='f(x)=1/x')
+plt.xlabel('oś x')
+plt.ylabel('oś y')
+plt.title('wykres')
+plt.show()
+
+
+*** ZADANIE 2 ***
+
