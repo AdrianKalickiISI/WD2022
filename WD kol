@@ -1,14 +1,75 @@
-*** ZADANIE 1 ***
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
-x=np.linspace(1,20,75)
-x1=np.arange(1,20.75,1)
-y=(1/x)
-plt.plot(x,y,'mo-', label='f(x)=1/x')
-plt.xlabel('oś x')
-plt.ylabel('oś y')
-plt.title('wykres')
-plt.show()
+# ****** ZADANIE 1 ******
+
+# x=np.linspace(1,20,75)
+# x1=np.arange(1,20.75,1)
+# y=(1/x)
+# plt.plot(x,y,'mo-', label='f(x)=1/x')
+# plt.xlabel('oś x')
+# plt.ylabel('oś y')
+# plt.title('wykres')
+# plt.show()
 
 
-*** ZADANIE 2 ***
+# ****** ZADANIE 2 ******
+
+# xlsx = pd.ExcelFile('imiona.xlsx') # wczytanie xlsx
+# df = pd.read_excel(xlsx, header=0)
+# roczniki = df['Rok'].unique()
+# grupa = df.groupby(['Rok']).agg({'Liczba':['sum']})
+# print(grupa)
+# wykres = grupa.plot.bar(ylabel='Liczba urodzeń', xlabel='Lata',alpha=0.5) # alpha-przezroczystość wykresu, plt.barh()-odwrócenie wykresu
+# wykres.legend().remove() # remove - wyłącza legendę
+# # plt.xticks(rotation=0)
+# plt.title("Liczba urodzeń w latach 2000-2017")
+# # plt.figure(figsize=(20,10)) # wielkość wykresu
+# plt.show()
+
+
+
+
+
+
+
+
+# dane={'Kraj':['Belgia','Indie','Brazylia','Polska'],'Stolica': ['Bruksela', 'New Delhi','Brasilia','Warszawa'], 'Populacja':[131244234,1233432535,34234232534,12342342342], 'Kontynent':['Europa','Azja', 'Ameryka','Europa']}
+# df = pd.DataFrame(dane)
+# print(df)
+# grupa = df.groupby('Kontynent')
+# etykiety = list(grupa.groups.keys())
+# wartosci = list(grupa.agg('Populacja').sum())
+# print(etykiety)
+# print(wartosci)
+# plt.bar(x=etykiety,height=wartosci,color=['red','green','yellow'])
+# plt.xlabel('Kontynent')
+# plt.ylabel('Populacja na kontynentach')
+# plt.show()
+
+
+###Wykres kołowy###
+
+# xlsx = pd.ExcelFile('imiona.xlsx') # wczytanie xlsx
+# df = pd.read_excel(xlsx, header=0)
+# roczniki = df['Rok'].unique()
+# grupa = df.groupby(['Rok']).agg({'Liczba':['sum']})
+# print(grupa)
+
+# grupa.plot(kind='pie', subplots=True, autopct='%.2f %%', fontsize=10, figsize=(10,10), legend=(3,0))
+# plt.legend().remove()
+# plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
 
