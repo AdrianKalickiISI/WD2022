@@ -16,17 +16,18 @@ import matplotlib.pyplot as plt
 
 # ****** ZADANIE 2 ******
 
-# xlsx = pd.ExcelFile('imiona.xlsx') # wczytanie xlsx
-# df = pd.read_excel(xlsx, header=0)
-# roczniki = df['Rok'].unique()
-# grupa = df.groupby(['Rok']).agg({'Liczba':['sum']})
-# print(grupa)
-# wykres = grupa.plot.bar(ylabel='Liczba urodzeń', xlabel='Lata',alpha=0.5) # alpha-przezroczystość wykresu, plt.barh()-odwrócenie wykresu
-# wykres.legend().remove() # remove - wyłącza legendę
-# # plt.xticks(rotation=0)
-# plt.title("Liczba urodzeń w latach 2000-2017")
-# # plt.figure(figsize=(20,10)) # wielkość wykresu
-# plt.show()
+xlsx = pd.ExcelFile('imiona.xlsx') # wczytanie xlsx
+df = pd.read_excel(xlsx, header=0)
+roczniki = df['Rok'].unique()
+grupa = df.groupby(['Rok']).agg({'Liczba':['sum']})
+print(grupa)
+wykres = grupa.plot.bar(ylabel='Liczba urodzeń', xlabel='Lata',alpha=1, figsize=(8,8)) # alpha-przezroczystość wykresu, plt.barh()-odwrócenie wykresu
+wykres.legend().remove() # remove - wyłącza legendę
+plt.xticks(rotation=30)
+plt.title("Liczba urodzeń w latach 2000-2017")
+ # wielkość wykresu
+# plt.subplots_adjust(left=0.2,right=0.8)
+plt.show()
 
 
 
