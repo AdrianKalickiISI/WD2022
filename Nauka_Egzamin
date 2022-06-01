@@ -1,0 +1,17 @@
+x=np.arange(-6,6,0.1)
+y=(20*np.sin(x))
+y1=(2*x/5)-2
+y2=7-x
+
+plt.plot(x,y,"r--",label="y=20*sin(x)")
+plt.plot(x,y1,"y--",label="y=(2x/5)-2")
+plt.plot(x,y2,"g",label="y=7-x")
+
+# plt.xlabel('oś x')
+# plt.ylabel('oś y')
+plt.title('Tytuł ABCD')
+
+
+plt.legend(loc='lower left')
+plt.ylim([-30,30])
+plt.show()
