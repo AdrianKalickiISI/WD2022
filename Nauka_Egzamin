@@ -15,3 +15,36 @@ plt.title('Tytuł ABCD')
 plt.legend(loc='lower left')
 plt.ylim([-30,30])
 plt.show()
+
+
+******************************
+n_groups = 3
+
+
+wartosci_nb=[6,33,1]
+wartosci_pm=[8,28,3]
+
+labels=['Hiper markety','Super markety','Domy handolwe']
+fig, ax = plt.subplots()
+# index = np.arange(n_groups)
+
+index = np.linspace(1,n_groups*1.2,n_groups)
+
+bar_width = 0.5
+opacity = 0.4
+
+
+
+plt.bar(index - bar_width/2, wartosci_nb, bar_width, label='Rok 2016')
+plt.bar(index + bar_width/2 , wartosci_pm, bar_width, label='Rok 2017')
+plt.xticks(index,labels,)
+
+
+plt.legend(loc='upper right')
+
+plt.title("Informacje o sklepach")
+plt.tight_layout()
+plt.show()
+
+
+**************************************
