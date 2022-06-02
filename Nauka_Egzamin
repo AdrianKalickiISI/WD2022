@@ -90,3 +90,50 @@ plt.show()
 #
 # plt.title("Wykres popularności sportów")
 # plt.show()
+*************************************************************
+names=['jowisz','Saturn','Neptun']
+percentages= [73.9, 22.1, 4]
+
+plt.pie(percentages,
+        labels=names,
+        colors=['yellow','orange','red'],
+        autopct='%.1f%%'
+         )
+*********************************************************************
+etykiety=np.arange(0,5)
+
+x=[0,1,2,3,4]
+y=[101, 70, 75, 25, 50]
+y1=[20, 10, 30, 10, 0]
+
+linia = np.arange(0, 6)
+wartosc = np.full(6, 120)
+
+plt.title('Tytuł')
+plt.bar(x=etykiety, height=y, color=['teal', 'darkgreen', 'greenyellow', 'pink', 'lawngreen'])
+plt.bar(x=etykiety, height=y1, color=['indigo', 'cyan', 'lime', 'blue', 'blue'])
+plt.plot(linia, wartosc, 'g')
+
+plt.axis([-0.60, 5.25, 0, 150])
+# plt.savefig('1.pdf', format='pdf')
+plt.show()
+******************************************************************************
+labels=['Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec']
+values=[21,32,42,77,66,50]
+values1=[50,41,39,22,24,30]
+
+
+plt.plot(labels,values,"g",label="Gry")
+plt.plot(labels,values1,'b--',label="Filmy")
+
+
+plt.xlabel('Miesiąc')
+plt.ylabel('Zyski')
+plt.title('Zyski z filmów i gier')
+
+
+plt.legend(loc='upper left')
+plt.ylim([0,100])
+plt.grid()
+plt.show()
+**************************************************************
