@@ -77,3 +77,16 @@ plt.ylim([3.0,4.0])
 plt.show()
 
 **********************************************
+# names=['Piłka nożna','Koszykówka','Siatkówka','Golf','Lekkoatletyka','Inne']
+# percentages= [40, 29, 16, 1, 6,8]
+#
+# plt.pie(percentages,
+#         labels=names,
+#         explode=(0.2,0,0,0,0,0),
+#         autopct='%.f%%'
+#         )
+#
+#
+#
+# plt.title("Wykres popularności sportów")
+# plt.show()
