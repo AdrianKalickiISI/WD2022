@@ -80,6 +80,7 @@ grupa.plot(kind='pie', subplots=True, fontsize=9, figsize=(6,6),explode=(0.2,0.2
 plt.title('Wykres wartości mieszkań w zależności od formy budownictwa w 2015 roku')
 plt.legend(title="Legenda", loc="upper left", bbox_to_anchor=(1, 0.15, 0, 0.75))
 plt.text(-1,1,165920)
+plt.ylabel(None)
 plt.show()
 
 
