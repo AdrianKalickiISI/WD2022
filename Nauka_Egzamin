@@ -106,23 +106,19 @@ plt.ylim([0,100])
 plt.grid()
 plt.show()
 *****ZAD 2*****
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+xlsx=pd.ExcelFile('lasy11.xlsx')
+df=pd.read_excel(xlsx, header=0)
+print(df)
+grupa = df.groupby(['Rok']).agg({'Wartość':['sum']})
+print(grupa)
+wykres = grupa.plot.bar(ylabel='Wartość ', xlabel='Lata',alpha=0.5, figsize=(8,8))
+wykres.legend().remove()
+plt.ylim([1848000,1878000])
+plt.xticks(rotation=30)
+plt.title("Wielkość lasów(ha) w 2015-2020")
+plt.figure(figsize=(20,10)) # wielkość wykresu
+plt.text(2015,1875,'165920')
+plt.show()
 ********************************ZESTAW12**************************************************
 *****ZAD1*****
 n_groups = 3
@@ -153,21 +149,60 @@ plt.title("Informacje o sklepach")
 plt.tight_layout()
 plt.show()
 ******ZAD2*****
+xlsx=pd.ExcelFile('lasy12.xlsx')
+df=pd.read_excel(xlsx, header=0)
+print(df)
+grupa = df.groupby(['Rok']).agg({'Wartość':['sum']})
+print(grupa)
+wykres = grupa.plot()
+wykres.set_ylabel('Wartość')
+wykres.tick_params(axis='x', labelrotation=50) # labelrotation,axis - ułożenie opisów na zaznaczonym wektorze
+wykres.legend().remove()
+plt.subplots_adjust(left=0.15, right=0.9, bottom=0.15, top=0.9)
+plt.title("Wielkość lasów")
+plt.text(2019.5, 1872000 ,'165920')
+plt.show()
+*************ZESTAW21*********************
+*****ZAD1*****
+###Podwójny wykres kolumnowy###
+n_groups = 3
+wartosci_ryz=[3.75,3.85,3.9]
+wartosci_marchew=[3.55,3.75,3.7]
 
+labels=['Maj','Maj','Czerwiec']
+fig, ax = plt.subplots()
+index = np.arange(n_groups)
+index = np.linspace(1,n_groups*1.2,n_groups)
 
+bar_width = 0.5
+opacity = 0.4
 
+plt.bar(index - bar_width/2, wartosci_ryz, bar_width, label='Ryż')
+plt.bar(index + bar_width/2 , wartosci_marchew, bar_width, label='Marchew')
+plt.xticks(index,labels,)
 
+plt.legend(loc='upper left')
 
+plt.title("Ceny wybranych produktów w 2019 roku")
+plt.tight_layout()
+plt.ylim([3.0,4.0])
+plt.show()
 
+#######ZAD 2########
 
-
-
-
-
-
-
-
-
+# xlsx=pd.ExcelFile('ceny21.xlsx')
+# df=pd.read_excel(xlsx, header=0)
+# print(df)
+# grupa = df.groupby(['Rok']).agg({'Wartość':['sum']})
+# print(grupa)
+# wykres = grupa.plot()
+# wykres.set_ylabel('Wartość')
+# wykres.tick_params(axis='x', labelrotation=50) # labelrotation,axis - ułożenie opisów na zaznaczonym wektorze
+# wykres.legend().remove()
+# plt.subplots_adjust(left=0.15, right=0.9, bottom=0.15, top=0.9)
+# plt.title("Wartość ryżu za kg w złotówkach")
+# plt.text(2010, 3.8 ,'165920')
+# plt.show()
 
 **********************ZESTAW 22*****************************
 *****ZAD 1*****
@@ -307,36 +342,8 @@ plt.show()
 
 
 
-**************************************
-n_groups = 3
-
-wartosci_ryz=[3.75,3.85,3.9]
-wartosci_marchew=[3.55,3.75,3.7]
-
-labels=['Maj','Maj','Czerwiec']
-fig, ax = plt.subplots()
-# index = np.arange(n_groups)
-
-index = np.linspace(1,n_groups*1.2,n_groups)
-
-bar_width = 0.5
-opacity = 0.4
-
-
-
-plt.bar(index - bar_width/2, wartosci_ryz, bar_width, label='Ryż')
-plt.bar(index + bar_width/2 , wartosci_marchew, bar_width, label='Marchew')
-plt.xticks(index,labels,)
-
-
-plt.legend(loc='upper left')
-
-plt.title("Ceny wybranych produktów w 2019 roku")
-plt.tight_layout()
-plt.ylim([3.0,4.0])
-plt.show()
 
 
 
 
-rupa = new_df.groupby('Car model').size()
+
