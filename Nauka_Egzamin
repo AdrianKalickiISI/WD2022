@@ -1,3 +1,52 @@
+************ZESTAW 1********************
+***zad 1****
+
+etykiety=np.arange(0,5)
+
+x=[0,1,2,3,4]
+y=[101, 70, 75, 25, 50]
+y1=[20, 10, 30, 10, 0]
+
+linia = np.arange(0, 6)
+wartosc = np.full(6, 120)
+
+plt.title('Tytuł')
+plt.bar(x=etykiety, height=y, color=['teal', 'darkgreen', 'greenyellow', 'pink', 'lawngreen'])
+plt.bar(x=etykiety, height=y1, color=['indigo', 'cyan', 'lime', 'blue', 'blue'])
+plt.plot(linia, wartosc, 'g')
+
+plt.axis([-0.60, 5.25, 0, 150])
+# plt.savefig('1.pdf', format='pdf')
+plt.show()
+
+***Zad 2***
+xlsx=pd.ExcelFile('mieszkania1.xlsx')
+df1=pd.read_excel(xlsx, header=0)
+print(df1)
+
+ind = df1[df1['Formy budownictwa'] == 'indywidualne']
+spo = df1[df1['Formy budownictwa'] == 'spółdzielcze']
+kom = df1[df1['Formy budownictwa'] == 'komunalne']
+
+lata = df1.groupby('Rok').groups.keys()
+
+
+plt.axis([2014, 2019, 0, 90000])
+plt.bar(x = lata, height = ind['Wartość'], color = 'blue', label = 'indywidualne')
+plt.bar(x = lata, height = spo['Wartość'], color = 'gray', label = 'spółdzielcze')
+plt.bar(x = lata, height = kom['Wartość'], color = 'green', label = 'komunalne')
+plt.title('Wykres wartości mieszkań w latach w zależności od formy budownictwa')
+plt.ylabel('Wartość')
+plt.xlabel('Lata')
+plt.text(2014.1, 85000, '165920')
+plt.legend()
+plt.savefig('mieszkania.pdf', format='pdf')
+plt.show()
+
+
+
+*********************ZESTAW 2***************************************************
+*****ZAD1*****
 x=np.arange(-6,6,0.1)
 y=(20*np.sin(x))
 y1=(2*x/5)-2
@@ -15,6 +64,30 @@ plt.title('Tytuł ABCD')
 plt.legend(loc='lower left')
 plt.ylim([-30,30])
 plt.show()
+*****ZAD2*****
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ******************************
@@ -99,25 +172,8 @@ plt.pie(percentages,
         colors=['yellow','orange','red'],
         autopct='%.1f%%'
          )
-*********************************************************************
-etykiety=np.arange(0,5)
 
-x=[0,1,2,3,4]
-y=[101, 70, 75, 25, 50]
-y1=[20, 10, 30, 10, 0]
-
-linia = np.arange(0, 6)
-wartosc = np.full(6, 120)
-
-plt.title('Tytuł')
-plt.bar(x=etykiety, height=y, color=['teal', 'darkgreen', 'greenyellow', 'pink', 'lawngreen'])
-plt.bar(x=etykiety, height=y1, color=['indigo', 'cyan', 'lime', 'blue', 'blue'])
-plt.plot(linia, wartosc, 'g')
-
-plt.axis([-0.60, 5.25, 0, 150])
-# plt.savefig('1.pdf', format='pdf')
-plt.show()
-******************************************************************************
+****************************************************************************
 labels=['Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec']
 values=[21,32,42,77,66,50]
 values1=[50,41,39,22,24,30]
