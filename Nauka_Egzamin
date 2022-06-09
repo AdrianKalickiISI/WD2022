@@ -147,3 +147,8 @@ plt.text(29, 0.1685 ,'CZK',verticalalignment='baseline',horizontalalignment='rig
 ax.grid()
 plt.show(
 
+
+
+
+
+grupa = new_df.groupby('Car model').size()
