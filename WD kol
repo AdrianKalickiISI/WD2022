@@ -109,5 +109,5 @@ plt.show()
 # plt.show()
 
 
-
+grupa = new_df.groupby('Car model').size()
 
