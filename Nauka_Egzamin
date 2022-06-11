@@ -332,7 +332,39 @@ plt.text(2020, 1750000 ,'165920')
 plt.show()
 
 
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import openpyxl
 
+
+# *** ZADANIE 1 ***
+# x=np.linspace(-3,3,50)
+# x1=np.arange(-3,3,1)
+# y=np.cos(x) * (x/3)
+# plt.plot(x,y,'mo-', label='f(x)=cos(x)*(x/3)')
+# plt.xlabel('wartosci x')
+# plt.ylabel('wartosci y')
+# plt.title('wykres zadania 1')
+# plt.show()
+
+
+# *** ZADANIE 2 ***
+
+df=pd.read_csv('automobile.csv', header=0,sep=";",decimal=',')
+
+print(df)
+df2=df[df["Price"]<10000]
+print(df2)
+grupa = df2.groupby(['Car model']).agg({'Price':['sum']})
+print(grupa)
+wykres=grupa.plot.bar(ylabel='Cena laczna marki',xlabel='Modele samochodow',alpha=1,figsize=(8,8))
+plt.xticks(rotation=75)
+plt.subplots_adjust(left=0.2,right=0.8)
+plt.legend().remove()
+plt.title("Zadanie 2")
+plt.show()
 
 
 
